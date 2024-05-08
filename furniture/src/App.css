@@ -123,3 +123,37 @@ button.buy {
 .range h1 {
     color: var(--grayfont);
 }
+
+
+
+
+
+
+
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.footer .right-hand{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.footer-line{
+    margin: 10px auto;
+    height: 1px;
+    background-color: lightgray;
+}

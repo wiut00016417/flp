@@ -1,15 +1,9 @@
 import './App.css';
-import Header from './components/Header';
-import Banner from './components/Banner';
-import Range from './components/Range';
+import Home from './Home.jsx'
 
 function App() {
     return (
-        <>
-            <Header />
-            <Banner />
-            <Range />
-        </>
+        <Home />
     )
 }
 
