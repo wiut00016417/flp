@@ -48,7 +48,7 @@ export default function Contact(){
                             <div className="contact-input"><label htmlFor="">Your Name</label><input type="text" placeholder="Abs"/></div>
                             <div className="contact-input"><label htmlFor="">Email Address</label><input type="text" placeholder="Abc@def.com"/></div>
                             <div className="contact-input"><label htmlFor="">Subject</label><input type="text" placeholder="This is optional"/></div>
-                            <div className="contact-input"><label htmlFor="">Message</label><input type="text" placeholder="Hi! I'd like to ask about"/></div>
+                            <div className="contact-input"><label htmlFor="">Message</label><textarea type="text" placeholder="Hi! I'd like to ask about"/></div>
                             <Button text={'SUBMIT'}/>
                         </form>
                     </div>

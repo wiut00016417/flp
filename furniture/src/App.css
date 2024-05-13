@@ -9,6 +9,7 @@ body {
     --bgbutton: rgb(165, 101, 42);
     --grayfont: #333333;
     --lightpink: #FCF8F3;
+    --lightfont: #9F9F9F;
 }
 
 * {
@@ -444,11 +445,105 @@ button.thenext:active{
     font-size: 0.8rem;
 }
 
-.contact-right input {
+.contact-right input, textarea {
     width: 530px;
     padding: 20px;
     margin: 15px 0;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 10px;
     border: 1px solid var(--grayfont);
+    resize: vertical;
+}
+
+.contact-right:last-child {
+    height: 80px;
+}
+
+.billing-form {
+    display: flex;
+    margin: 100px;
+    justify-content: center;
+}
+
+.billing-form > * {
+    margin: 50px;
+}
+
+.billing-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.billing-details input, select {
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.billing-form-down form {
+    display: flex;
+    flex-direction: column;
+    max-width: 460px;
+}
+
+.name-surname {
+    display: flex;
+    margin-top: 25px;
+}
+
+.name, .surname {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    margin-right: 15px;
+}
+
+ul.bank-transfer li {
+    list-style: disc;
+    padding: 10px;
+}
+
+ul.transfer-types li {
+    list-style: circle;
+    padding: 10px;
+}
+
+label {
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.product-detail-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.product-order {
+    max-width: 605px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lighttext {
+    color: var(--lightfont);
+}
+
+button.order {
+    padding: 20px;
+    width: 320px;
+    margin: 40px auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+.large-brown-text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--bgbutton);
 }

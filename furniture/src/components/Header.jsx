@@ -24,7 +24,7 @@ function Header() {
                     <li><a href=""><img src={contact} alt="Contact" /></a></li>
                     <li><a href=""><img src={search} alt="Search" /></a></li>
                     <li><a href=""><img src={like} alt="Like" /></a></li>
-                    <li><a href=""><img src={basket} alt="Basket" /></a></li>
+                    <li><a href="/checkout"><img src={basket} alt="Basket" /></a></li>
                 </ul>
             </div>
         </div>
