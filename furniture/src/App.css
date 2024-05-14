@@ -342,8 +342,8 @@ button.buy:hover {
 
 .nav-panel {
     display: flex;
-    position: absolute;
-    top: 450%;
+    position: relative;
+    bottom: 150px;
 }
 
 button.thenext{

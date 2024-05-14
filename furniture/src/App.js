@@ -5,6 +5,7 @@ import About from './views/About'
 import Contact from './views/Contact'
 import NotFound from './views/NoPage';
 import Checkout from './views/Checkout';
+import Comparison from './views/Comparison';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
                 <Route path='about' element={<About />} />
                 <Route path='contact' element={<Contact />} />
                 <Route path='checkout' element={<Checkout />} />
+                <Route path='comparison' element={<Comparison />} />
                 <Route path='*' element={<NotFound />} />
             </Routes>
         </BrowserRouter>
