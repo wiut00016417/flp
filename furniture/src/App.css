@@ -594,3 +594,143 @@ button.order:hover{
 .rating {
     color: var(--bgbutton);
 }
+
+.counter-button {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    padding: 0 7px;
+}
+  
+.counter-button button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+  
+.count {
+    margin: 0 40px;
+}
+
+.product-purchase {
+    padding: 100px;
+}
+
+.product-info {
+    display: flex;
+    justify-content: center;
+}
+
+.product-pics {
+    display: flex;
+    margin: 50px;
+}
+
+.product-purchase-buttons{
+    display: flex;
+    margin-top: 30px;
+}
+
+.product-purchase-certificate {
+    display: flex;
+    padding: 15px;
+    color: var(--lightfont);
+}
+
+.product-purchase-certificate > div {
+    padding: 0px 20px;
+}
+
+.certificate-value4 img {
+    padding-right: 7px;
+}
+
+.product-purchase-size {
+    margin: 15px 0;
+}
+
+span.sizes button {
+    width: 50px;
+    padding: 10px 0;
+    margin-right: 10px;
+    margin-top: 10px;
+    border: 1px solid transparent;
+}
+
+span.sizes button:hover {
+    border: 1px solid var(--bgbutton);
+    border-radius: 3px;
+}
+
+span.sizes button:active {
+    background-color: var(--bgbutton);
+}
+
+span.colors {
+    display: flex;
+}
+
+span.colors button {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 5px;
+    border: 3px solid transparent;
+}
+
+span.colors > div {
+    border: 2px solid transparent;
+    border-radius: 50%;
+    margin: 15px;
+}
+
+span.colors > div:hover {
+    border: 2px solid var(--lightfont);
+}
+
+span.colors > div:active {
+    border: 2px solid black;
+}
+
+.color-purple {
+    background-color: rgba(129, 109, 250, 1);
+}
+
+.color-black {
+    background-color: #000;
+}
+
+.color-brown {
+    background-color: var(--bgbutton);
+}
+
+.product-ad {
+    padding: 150px;
+}
+
+.ad-titles {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+}
+
+.ad-titles > a {
+    font-size: 1.5rem;
+    color: var(--lightfont);
+}
+
+.ad-titles > a:active {
+    color: black;
+}
+
+.ad-text > p {
+    padding: 20px 0;
+}
+
+.related-products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

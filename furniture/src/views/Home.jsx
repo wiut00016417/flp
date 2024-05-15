@@ -11,7 +11,7 @@ function Home(){
             <Header />
             <Banner />
             <Range />
-            <Products />
+            <Products headtext={'Our Products'} />
             <Rooms />
             <Footer />
         </>

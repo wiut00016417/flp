@@ -8,10 +8,10 @@ import image7 from '../assets/productgallery/image7.png'
 import image8 from '../assets/productgallery/image8.png'
 import Button from './Button.jsx'
 
-function Products(){
+function Products({headtext}){
     return (
         <div className="products">
-            <h1>Our Products</h1>
+            <h1>{headtext}</h1>
             <div className="product-gallery">
                 <div className="product">
                     <img src={image1} alt="" />

@@ -10,11 +10,11 @@ export default function Filterline(){
                 <p>Filter</p>
                 <a href=""><img src={reform} alt="reform" /></a>
                 <a href=""><img src={list} alt="list" /></a>
-                <p>Showing 1-16 of 32 products</p>
+                <p>Showing 1-8 of 8 products</p>
             </div>
             <div className="right-elements">
                 <label>Show</label>
-                <input type="text" name="number" id="" placeholder='16' />
+                <input type="text" name="number" id="" placeholder='8' />
                 <label>Sort By</label>
                 <input type="text" name="sort" id="" placeholder='Default'/>
             </div>
