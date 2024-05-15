@@ -5,13 +5,13 @@ import image4 from '../assets/productgallery/image4.png'
 import Button from "./Button"
 import Pagination from "./Pagination"
 
-export default function Rooms(){
+export default function Rooms(){ 
     return(
         <div className="ad">
             <div className="ad-content">
                 <h2>50+ Beautiful rooms inspiration</h2>
                 <p>Our designer already made a lot of beautiful prototype rooms that will inspire you</p>
-                <Button text={'Explore More'} />
+                <a href="product"><Button text={'Explore More'} /></a>
             </div>
             <div className="image-slider">
                 <div className="slide">

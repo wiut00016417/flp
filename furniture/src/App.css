@@ -540,10 +540,57 @@ button.order {
     border: 1px solid black;
     border-radius: 10px;
     font-size: 1.2rem;
+    transition: all 0.2s ease-in-out;
+}
+
+button.order:hover{
+    background-color: #000;
+    color: #fff;
 }
 
 .large-brown-text {
     font-size: 1.6rem;
     font-weight: bold;
+    color: var(--bgbutton);
+}
+
+.comparison {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 50px 200px;
+}
+
+.comparison > * {
+    flex: 1 1 0;
+}
+
+.title a {
+    text-decoration: underline;
+}
+
+.comparison img {
+    height: 184px;
+    width: 280px;
+}
+
+.comparison h2 {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.comparison > div > * {
+    padding: 25px 0;
+}
+
+.comparison-parameters {
+    margin-top: 160px;
+}
+
+.comparison-parameters > div {
+    padding: 18px 0;
+}
+
+.rating {
     color: var(--bgbutton);
 }

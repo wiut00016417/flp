@@ -63,7 +63,7 @@ function Products(){
                 </div>
             </div>
             <div className="button-show">
-                <Button text={'SHOW MORE'}><a href=''>s</a></Button>
+                <a href="comparison"><Button text={'SHOW MORE'}></Button></a>
             </div>
         </div>
     )
