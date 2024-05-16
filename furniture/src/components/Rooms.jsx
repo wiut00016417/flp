@@ -1,37 +1,97 @@
-import image1 from '../assets/slider.png'
-import image2 from '../assets/productgallery/image2.png'
-import image3 from '../assets/productgallery/image3.png'
-import image4 from '../assets/productgallery/image4.png'
-import Button from "./Button"
-import Pagination from "./Pagination"
+import React, { useState } from 'react';
 
-export default function Rooms(){ 
-    return(
-        <div className="ad">
-            <div className="ad-content">
-                <h2>50+ Beautiful rooms inspiration</h2>
-                <p>Our designer already made a lot of beautiful prototype rooms that will inspire you</p>
-                <a href="product"><Button text={'Explore More'} /></a>
-            </div>
-            <div className="image-slider">
-                <div className="slide">
-                    <div className="content">
-                        <img src={image1} alt="Inner Peace" />
-                        <div className="nav-panel">
-                            <div className="desc">
-                                <p>0 - 1 Bedroom</p>
-                                <h2>Inner Peace</h2>
-                            </div>
-                            <button className='thenext'>&gt;</button>
-                        </div>
-                    </div>
-                    <div className="images">
-                        <img src={image2} alt="Outer Space" />
-                        <img src={image3} alt="Audacity Sus" />
-                        <img src={image4} alt="Likelihood Lake" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
-}
+const ImageSlider = ({ images, descriptions }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    const newIndex = (currentIndex + 1) % images.length;
+    setCurrentIndex(newIndex);
+  };
+
+  const handleDotClick = (index) => {
+    setCurrentIndex(index);
+  };
+
+  const mainImageStyle = {
+    width: '100%',
+    height: 'auto',
+  };
+
+  const upcomingImageStyle = {
+    width: 'calc(33% - 10px)',
+    height: 'auto',
+    marginRight: '10px',
+    transition: 'transform 0.5s ease-in-out',
+  };
+
+  const imageContainerStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    overflowX: 'hidden',
+  };
+
+  const navigationStyle = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: '10px',
+  };
+
+  const dotsContainerStyle = {
+    display: 'flex',
+    justifyContent: 'center',
+  };
+
+  const dotStyle = {
+    width: '10px',
+    height: '10px',
+    borderRadius: '50%',
+    backgroundColor: '#ccc',
+    marginRight: '5px',
+    cursor: 'pointer',
+  };
+
+  const activeDotStyle = {
+    ...dotStyle,
+    backgroundColor: '#000',
+  };
+
+  return (
+    <div>
+      <div style={imageContainerStyle}>
+        {images.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            alt={`Image ${index + 1}`}
+            style={{
+              ...upcomingImageStyle,
+              transform: `translateX(${
+                index === currentIndex ? 0 : index > currentIndex ? '-100%' : '100%'
+              })`,
+            }}
+          />
+        ))}
+        <img src={images[currentIndex]} alt={`Main Image ${currentIndex + 1}`} style={mainImageStyle} />
+      </div>
+      <div style={navigationStyle}>
+        <p>{descriptions[currentIndex]}</p>
+        <button onClick={handleNext}>&gt;</button>
+      </div>
+      <div style={dotsContainerStyle}>
+        {images.map((image, index) => (
+          <span
+            key={index}
+            role="button"
+            tabIndex="0"
+            aria-label={`Go to image ${index + 1}`}
+            onClick={() => handleDotClick(index)}
+            style={index === currentIndex ? activeDotStyle : dotStyle}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default ImageSlider;

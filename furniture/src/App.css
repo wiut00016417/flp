@@ -315,66 +315,6 @@ button.buy:hover {
     padding: 10px;
 }
 
-.slide {
-    display: flex;
-}
-
-.slide .content img {
-    height: 450px;
-}
-
-.slide img {
-    max-width: 300px;
-    border-radius: 20px;
-    margin-right: 20px;
-}
-
-.images {
-    display: flex;
-    width: 40%;
-    height: 380px;
-}
-
-.image-slider {
-    display: inline-block;
-    overflow: hidden;
-}
-
-.nav-panel {
-    display: flex;
-    position: relative;
-    bottom: 150px;
-}
-
-button.thenext{
-    height: 48px;
-    width: 48px;
-    position: relative;
-    top: 82px;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 1.2rem;
-    color: #fff;
-    background-color: var(--bgbutton);
-    border: none;
-    transition: all 0.2s;
-}
-
-button.thenext:hover{
-    transform: translateX(8px);
-}
-
-button.thenext:active{
-    background-color: var(--lightpink);
-    color: var(--bgbutton);
-}
-
-.desc {
-    height: 130px;
-    width: 217px;
-    padding: 35px 20px;
-    background-color: #fff;
-}
-
 @media only screen and (max-width: 1000px) {
     .header {
         flex-direction: column;

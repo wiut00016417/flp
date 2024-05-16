@@ -1,7 +1,9 @@
-function Button({text}){
+import { Children } from "react"
+
+function Button({children, onCLick}){
     return (
-        <button className="buy">
-            {text}
+        <button onClick={onCLick} className="buy">
+            {children}
         </button>
     )
 }
