@@ -6,7 +6,7 @@ function Ticket(){
             <p>New Arrival</p>
             <h1>Discover Our New Collection</h1>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In laboriosam officiis velit asperiores et earum.</p>
-            <a href='checkout'><Button text='BUY NOW'/></a>
+            <a href='checkout'><Button>Buy Now</Button></a>
         </div>
     )
 }

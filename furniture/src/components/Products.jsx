@@ -63,7 +63,7 @@ function Products({headtext}){
                 </div>
             </div>
             <div className="button-show">
-                <a href="comparison"><Button text={'SHOW MORE'}></Button></a>
+                <a href="comparison"><Button>Show More</Button></a>
             </div>
         </div>
     )

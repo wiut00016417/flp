@@ -96,6 +96,7 @@ button.buy {
     background-color: var(--bgbutton);
     color: var(--bgticket);
     transition: all 0.2s;
+    text-transform: uppercase;
 }
 
 button.buy:hover {
@@ -673,4 +674,24 @@ span.colors > div:active {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.cart-self {
+    display: flex;
+    padding: 80px;
+    justify-content: space-around;
+}
+
+.cart-product > div {
+    display: flex;
+    padding: 25px;
+}
+
+.cart-titles {
+    margin-left: 105px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cart-details {
 }

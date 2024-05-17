@@ -5,11 +5,15 @@ import Footer from "../components/Footer";
 import product1 from "../assets/comparison/product1.png"
 import product2 from "../assets/comparison/product2.png"
 import Button from "../components/Button";
-import { CartContent } from "./Cart";
-
 
 export default function Comparison(){
+    const leftBtn = () => {
+        window.location.href = 'ascart'
+    }
 
+    const rightBtn = () => {
+        window.location.href = 'osscart'
+    }
     return (
         <div className="comparison-page">
             <Header />
@@ -104,7 +108,7 @@ export default function Comparison(){
                         <p>The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.</p>
                         <p>1 Year</p>
                     </div>
-                    <a href="cart"><Button>Add To Cart</Button></a>
+                    <Button onCLick={leftBtn}>Add To Cart</Button>
                 </div>
                 <div className="second-product">
                     <div className="product-title">
@@ -153,7 +157,7 @@ export default function Comparison(){
                         <p>The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.</p>
                         <p>3 Months</p>
                     </div>
-                    <a href="cart"><Button>Add To Cart</Button></a>
+                    <Button onCLick={rightBtn}>Add To Cart</Button>
                 </div>
                 <div className="product-add">
                     <h2>Add a Product</h2>
