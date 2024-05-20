@@ -1,4 +1,5 @@
 import logo from '../assets/logo.svg'
+import {NavLink} from "react-router-dom"
 import contact from '../assets/contact.svg'
 import search from '../assets/search.svg'
 import like from '../assets/like.svg'
@@ -13,18 +14,18 @@ function Header() {
             </div>
             <div className="links">
                 <ul>
-                    <li><a href="/home">Home</a></li>
-                    <li><a href="/shop">Shop</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><NavLink to="/Home">Home</NavLink></li>
+                    <li><NavLink to="/Shop">Shop</NavLink></li>
+                    <li><NavLink to="/About">About</NavLink></li>
+                    <li><NavLink to="/Contact">Contact</NavLink></li>
                 </ul>
             </div>
             <div className="icons">
                 <ul>
-                    <li><a href=""><img src={contact} alt="Contact" /></a></li>
-                    <li><a href=""><img src={search} alt="Search" /></a></li>
-                    <li><a href="/product"><img src={like} alt="Like" /></a></li>
-                    <li><a href="/checkout"><img src={basket} alt="Basket" /></a></li>
+                    <li><NavLink to=""><img src={contact} alt="Contact" /></NavLink></li>
+                    <li><NavLink to=""><img src={search} alt="Search" /></NavLink></li>
+                    <li><NavLink to="/product"><img src={like} alt="Like" /></NavLink></li>
+                    <li><NavLink to="/checkout"><img src={basket} alt="Basket" /></NavLink></li>
                 </ul>
             </div>
         </div>

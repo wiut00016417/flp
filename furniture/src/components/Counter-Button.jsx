@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function CounterButton() {
-  const [count, setCount] = useState(0); // State variable for count
+  const [count, setCount] = useState(0);
 
   const handleIncrement = () => {
     setCount(count + 1);
   };
 
   const handleDecrement = () => {
-    setCount(Math.max(count - 1, 0)); // Ensure count doesn't go below 0
+    setCount(Math.max(count - 1, 0));
   };
 
   return (

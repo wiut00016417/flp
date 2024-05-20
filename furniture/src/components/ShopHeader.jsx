@@ -1,4 +1,4 @@
-import Filter from './Filter-line'
+import Filter from './Filter-Line'
 
 export default function ShopHeader({headtext}){
     return(

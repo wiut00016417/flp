@@ -1,8 +1,7 @@
-import { Children } from "react"
 
-function Button({children, onCLick}){
+function Button({children, ...otherProps}){
     return (
-        <button onClick={onCLick} className="buy">
+        <button {...otherProps} className="buy">
             {children}
         </button>
     )

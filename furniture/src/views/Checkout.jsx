@@ -1,12 +1,9 @@
-import Header from "../components/Header"
 import ShopHeader from "../components/ShopHeader"
 import ShopFooter from "../components/ShopFooter"
-import Footer from "../components/Footer"
 
 export default function Checkout(){
     return (
         <div className="checkout">
-            <Header />
             <ShopHeader headtext={'Checkout'}/>
             <div className="billing-form">
                 <div className="billing-details">
@@ -71,7 +68,6 @@ export default function Checkout(){
                 </div>
             </div>
             <ShopFooter />
-            <Footer />
         </div>
     )
 }

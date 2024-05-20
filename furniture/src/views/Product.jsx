@@ -1,7 +1,5 @@
-import Header from '../components/Header';
 import Products from '../components/Products';
 import ShopFooter from '../components/ShopFooter';
-import Footer from '../components/Footer';
 import CounterButton from '../components/Counter-Button';
 import fb from '../assets/sm-logos/facebook.svg'
 import lin from '../assets/sm-logos/linkedin.svg'
@@ -17,7 +15,6 @@ import mainpic from '../assets/button-images/main-pic.png'
 export default function Product(){
     return (
         <div className="product-page">
-            <Header />
             <div className="product-purchase">
                 <div className="product-info">
                     <div className="product-pics">
@@ -84,7 +81,6 @@ export default function Product(){
             </div>
             <Products headtext={'Related Products'}/>
             <ShopFooter />
-            <Footer />
         </div>
     )
 }

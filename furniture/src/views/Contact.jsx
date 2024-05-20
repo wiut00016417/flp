@@ -1,6 +1,4 @@
-import Header from "../components/Header"
 import ShopHeader from "../components/ShopHeader"
-import Footer from "../components/Footer"
 import Button from "../components/Button"
 import location from "../assets/contact/location.svg"
 import phone from "../assets/contact/phone.svg"
@@ -10,7 +8,6 @@ import ShopFooter from "../components/ShopFooter"
 export default function Contact(){
     return (
         <div className="contact">
-            <Header />
             <ShopHeader headtext={'Contact'}/>
             <div className="contact-info">
                 <h1>
@@ -49,13 +46,12 @@ export default function Contact(){
                             <div className="contact-input"><label htmlFor="">Email Address</label><input type="text" placeholder="Abc@def.com"/></div>
                             <div className="contact-input"><label htmlFor="">Subject</label><input type="text" placeholder="This is optional"/></div>
                             <div className="contact-input"><label htmlFor="">Message</label><textarea type="text" placeholder="Hi! I'd like to ask about"/></div>
-                            <Button text={'SUBMIT'}/>
+                            <Button>SUBMIT</Button>
                         </form>
                     </div>
                 </div>
             </div>
             <ShopFooter />
-            <Footer />
         </div>
         
     )
