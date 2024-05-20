@@ -693,5 +693,28 @@ span.colors > div:active {
     justify-content: space-around;
 }
 
-.cart-details {
+.slider {
+    padding: 150px;
+    background-color: var(--lightpink);
+}
+
+.slider-container {
+    display: flex;
+    padding: 20px 100px;
+}
+
+.slide img {
+    height: 582px;
+    width: 404px;
+}
+
+.slider-pagination {
+    display: flex;
+}
+
+.slider-dots {
+    padding: 4px;
+    border-radius: 50%;
+    background-color: var(--lightfont);
+    margin: 8px;
 }
