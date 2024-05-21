@@ -1,5 +1,3 @@
-import Filter from './Filter-Line'
-
 export default function ShopHeader({headtext}){
     return(
         <div className="shopheader">

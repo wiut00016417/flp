@@ -1,6 +1,6 @@
-import Swiper from "swiper";
-import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
+import Swiper from "swiper/bundle";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css/bundle";
 import slider1 from "../assets/slider1.png";
 import slider2 from "../assets/slider2.png";
 import slider3 from "../assets/slider3.png";
@@ -11,19 +11,22 @@ import Button from "../components/Button";
 import bg from "../assets/bg.jpg";
 
 export default function Home() {
-  const Slider = new Swiper(".slider", {
-    modules: [Navigation, Pagination],
+  const swiper = new Swiper(".swiper", {
     direction: "horizontal",
     loop: true,
+
     pagination: {
-      el: '.slider-pagination'
+      el: ".swiper-pagination",
     },
+
     navigation: {
-      nextEl: '.slider-next-btn'
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
+
     scrollbar: {
-      el: '.slider-scrollbar'
-    }
+      el: ".swiper-scrollbar",
+    },
   });
 
   return (
@@ -44,24 +47,24 @@ export default function Home() {
       </div>
       <Range />
       <Products headtext={"Our Products"} />
-      <div className="slider">
-        <div className="slider-container">
-          <div className="slide">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
             <img src={slider1} alt="" />
           </div>
-          <div className="slide">
+          <div class="swiper-slide">
             <img src={slider2} alt="" />
           </div>
-          <div className="slide">
+          <div class="swiper-slide">
             <img src={slider3} alt="" />
           </div>
         </div>
-        <div className="slider-pagination">
-          <div className="slider-dots"></div>
-          <div className="slider-dots"></div>
-          <div className="slider-dots"></div>
-          <div className="slider-dots"> </div>
-        </div>
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <div class="swiper-scrollbar"></div>
       </div>
     </>
   );

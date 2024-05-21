@@ -693,28 +693,12 @@ span.colors > div:active {
     justify-content: space-around;
 }
 
-.slider {
-    padding: 150px;
-    background-color: var(--lightpink);
+.swiper {
+  width: 600px;
+  height: 300px;
 }
 
-.slider-container {
-    display: flex;
-    padding: 20px 100px;
-}
-
-.slide img {
-    height: 582px;
-    width: 404px;
-}
-
-.slider-pagination {
-    display: flex;
-}
-
-.slider-dots {
-    padding: 4px;
-    border-radius: 50%;
-    background-color: var(--lightfont);
-    margin: 8px;
+.swiper-slide>img {
+  height: 300px;
+  width: auto;
 }
