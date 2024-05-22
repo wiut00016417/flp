@@ -2,7 +2,7 @@ import Products from "../components/Products";
 import ShopHeader from "../components/ShopHeader";
 import ShopFooter from "../components/ShopFooter";
 import Pagination from "../components/Pagination";
-import Filter from "../components/Filter-line";
+import Filter from "../components/Filter-Line";
 
 function Shop() {
   return (

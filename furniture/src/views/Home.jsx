@@ -26,7 +26,7 @@ export default function Home() {
 
     scrollbar: {
       el: ".swiper-scrollbar",
-    },
+    }
   });
 
   return (
@@ -47,24 +47,30 @@ export default function Home() {
       </div>
       <Range />
       <Products headtext={"Our Products"} />
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src={slider1} alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src={slider2} alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src={slider3} alt="" />
-          </div>
+      <div className="image-slider">
+        <div className="swiper-description">
+          <h1>50+ Beautiful Rooms inspiration</h1>
+          <p>
+            Our designer already made a lot of beautiful prototypes that might
+            inspire you
+          </p>
+          <Button>EXPLORE MORE</Button>
         </div>
-        <div class="swiper-pagination"></div>
-
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-        <div class="swiper-scrollbar"></div>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src={slider1} alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src={slider2} alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src={slider3} alt="" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+        </div>
       </div>
     </>
   );
