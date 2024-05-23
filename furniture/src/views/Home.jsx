@@ -1,34 +1,21 @@
-import Swiper from "swiper/bundle";
+import SwiperCore from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { useRef, useState } from "react";
 import { Navigation, Pagination } from "swiper/modules";
-import "swiper/css/bundle";
+import { isMobile } from "react-device-detect";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import slider1 from "../assets/slider1.png";
 import slider2 from "../assets/slider2.png";
 import slider3 from "../assets/slider3.png";
-
+import Slide from "../sections/Slide";
 import Range from "../components/Range";
 import Products from "../components/Products";
 import Button from "../components/Button";
 import bg from "../assets/bg.jpg";
 
 export default function Home() {
-  const swiper = new Swiper(".swiper", {
-    direction: "horizontal",
-    loop: true,
-
-    pagination: {
-      el: ".swiper-pagination",
-    },
-
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-
-    scrollbar: {
-      el: ".swiper-scrollbar",
-    }
-  });
-
   return (
     <>
       <div className="banner">
@@ -56,21 +43,31 @@ export default function Home() {
           </p>
           <Button>EXPLORE MORE</Button>
         </div>
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src={slider1} alt="" />
-            </div>
-            <div class="swiper-slide">
-              <img src={slider2} alt="" />
-            </div>
-            <div class="swiper-slide">
-              <img src={slider3} alt="" />
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-next"></div>
-        </div>
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={40}
+          centeredSlides={true}
+          initialSlide={1}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={{
+            nextEl: document.querySelector("nextBtn"),
+          }}
+          modules={[Pagination]}
+          className="swiper"
+        >
+          <SwiperSlide>
+            <Slide image={slider1} description={"Inner Peace"}></Slide>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Slide image={slider2} description={"Outer Space"}></Slide>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Slide image={slider3} description={"Audi Sauce"}></Slide>
+          </SwiperSlide>
+          <button className=".nextBtn">NEXT</button>
+        </Swiper>
       </div>
     </>
   );
