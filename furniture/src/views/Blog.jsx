@@ -5,7 +5,11 @@ import blog3 from "../assets/blog-images/blog3.png";
 import Pagination from "../components/Pagination";
 import ShopFooter from "../components/ShopFooter";
 import ShopHeader from "../components/ShopHeader";
-
+import image1 from '../assets/recent-posts/image1.png'
+import image2 from '../assets/recent-posts/image2.png'
+import image3 from '../assets/recent-posts/image3.png'
+import image4 from '../assets/recent-posts/image4.png'
+import image5 from '../assets/recent-posts/image5.png'
 
 export default function Blog() {
   return (
@@ -51,23 +55,23 @@ export default function Blog() {
           <div className="recent-blogs">
             <h1>Recent Posts</h1>
             <div className="recent-post">
-              <img src="" alt="" />
+              <img src={image1} alt="" />
               <p>Going all-in with millennial design</p>
             </div>
             <div className="recent-post">
-              <img src="" alt="" />
+              <img src={image2} alt="" />
               <p>Exploring new ways of decorating</p>
             </div>
             <div className="recent-post">
-              <img src="" alt="" />
+              <img src={image3} alt="" />
               <p>Handmade pieces that took time to make</p>
             </div>
             <div className="recent-post">
-              <img src="" alt="" />
+              <img src={image4} alt="" />
               <p>Modern home in Milan</p>
             </div>
             <div className="recent-post">
-              <img src="" alt="" />
+              <img src={image5} alt="" />
               <p>Colorful office redesign</p>
             </div>
           </div>

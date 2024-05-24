@@ -15,8 +15,19 @@ import Button from "../components/Button";
 import bg from "../assets/bg.jpg";
 
 export default function Home() {
+  const handleMenu = () => {
+    let menubar = document.getElementsByClassName("menu")
+  }
   return (
-    <>
+    <div className="homepage">
+      <div className="menu">
+        <ul>
+          <li>Home</li>
+          <li>Shop</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </div>
       <div className="banner">
         <img src={bg} alt="Cozy environment" />
         <div className="ticket">
@@ -50,9 +61,6 @@ export default function Home() {
           pagination={{
             clickable: true,
           }}
-          navigation={{
-            nextEl: document.querySelector("nextBtn"),
-          }}
           modules={[Pagination]}
           className="swiper"
         >
@@ -65,9 +73,8 @@ export default function Home() {
           <SwiperSlide>
             <Slide image={slider3} description={"Audi Sauce"}></Slide>
           </SwiperSlide>
-          <button className=".nextBtn">NEXT</button>
         </Swiper>
       </div>
-    </>
+    </div>
   );
 }
