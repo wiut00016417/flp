@@ -2,7 +2,6 @@ import SwiperCore from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useRef, useState } from "react";
 import { Navigation, Pagination } from "swiper/modules";
-import { isMobile } from "react-device-detect";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
