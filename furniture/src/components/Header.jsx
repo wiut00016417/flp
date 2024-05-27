@@ -4,11 +4,44 @@ import contact from "../assets/contact.svg";
 import search from "../assets/search.svg";
 import like from "../assets/like.svg";
 import basket from "../assets/basket.svg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Header() {
+  const [isToggle, setIsToggle] = useState(false);
+  const handleResize = () => {
+    const width = window.innerWidth;
+    const newToggle = width > 650 ? false : true;
+    setIsToggle(newToggle);
+  };
+
+  useEffect(() => {
+    const isResized = () => handleResize();
+    window.addEventListener("resize", isResized);
+
+    return () => window.removeEventListener("resize", isResized);
+  }, []);
+
+  const handleMenu = () => {
+    setIsToggle(!isToggle);
+  };
   return (
     <div className="header">
+      <div className={`menu ${isToggle && "toggle"}`}>
+        <ul>
+          <li>
+            <NavLink href="">Home</NavLink>
+          </li>
+          <li>
+            <NavLink href="Shop">Shop</NavLink>
+          </li>
+          <li>
+            <NavLink href="About">About</NavLink>
+          </li>
+          <li>
+            <NavLink href="Contact">Contact</NavLink>
+          </li>
+        </ul>
+      </div>
       <div className="main-header">
         <div className="logo">
           <img src={logo} alt="Logo" />
@@ -55,7 +88,11 @@ function Header() {
           </ul>
         </div>
       </div>
-      <button id="menu-toggle" aria-label="Toggle Navigation">
+      <button
+        id="menu-toggle"
+        aria-label="Toggle Navigation"
+        onClick={handleMenu}
+      >
         <span></span>
         <span></span>
         <span></span>

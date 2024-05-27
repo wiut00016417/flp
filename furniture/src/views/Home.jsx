@@ -1,6 +1,6 @@
 import SwiperCore from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -15,19 +15,8 @@ import Button from "../components/Button";
 import bg from "../assets/bg.jpg";
 
 export default function Home() {
-  const handleMenu = () => {
-    let menubar = document.getElementsByClassName("menu")
-  }
   return (
     <div className="homepage">
-      <div className="menu">
-        <ul>
-          <li>Home</li>
-          <li>Shop</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
-      </div>
       <div className="banner">
         <img src={bg} alt="Cozy environment" />
         <div className="ticket">
@@ -55,7 +44,7 @@ export default function Home() {
         </div>
         <Swiper
           slidesPerView={3}
-          spaceBetween={40}
+          spaceBetween={80}
           centeredSlides={true}
           initialSlide={1}
           pagination={{
@@ -71,7 +60,7 @@ export default function Home() {
             <Slide image={slider2} description={"Outer Space"}></Slide>
           </SwiperSlide>
           <SwiperSlide>
-            <Slide image={slider3} description={"Audi Sauce"}></Slide>
+            <Slide image={slider3} description={"Lorem Ipsum"}></Slide>
           </SwiperSlide>
         </Swiper>
       </div>

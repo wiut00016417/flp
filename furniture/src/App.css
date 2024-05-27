@@ -67,6 +67,11 @@ body {
   color: black;
 }
 
+.links ul li a:active,
+.links ul li a:focus {
+  color: var(--bgbutton);
+}
+
 .ticket {
   width: 30%;
   padding: 30px;
@@ -283,7 +288,8 @@ button.buy:hover {
   border: 1px solid var(--bgbutton);
 }
 
-.page-numbers button:active {
+.page-numbers button:active,
+.page-numbers button:focus {
   background-color: var(--bgbutton);
   color: var(--bgticket);
 }
@@ -587,7 +593,8 @@ span.sizes button:hover {
   border-radius: 3px;
 }
 
-span.sizes button:active {
+span.sizes button:active
+span.sizes button:focus {
   background-color: var(--bgbutton);
 }
 
@@ -613,7 +620,8 @@ span.colors > div:hover {
   border: 2px solid var(--lightfont);
 }
 
-span.colors > div:active {
+span.colors > div:active
+span.colors > div:focus {
   border: 2px solid black;
 }
 
@@ -644,7 +652,8 @@ span.colors > div:active {
   color: var(--lightfont);
 }
 
-.ad-titles > a:active {
+.ad-titles > a:active
+.ad-titles > a:focus {
   color: black;
 }
 
@@ -682,6 +691,7 @@ span.colors > div:active {
 
 .slide img {
   height: 400px;
+  width: 280px;
 }
 
 .image-slider {
@@ -704,11 +714,10 @@ span.colors > div:active {
 .slide p {
   font-size: 1.2rem;
   position: relative;
-  padding: 20px;
-  margin: 20px;
+  padding: 20px 10px;
   font-weight: 600;
   bottom: 120px;
-  background-color: rgba(245, 245, 245, 0.7);
+  background-color: rgba(245, 245, 245, 0.8);
   font-size: 1.5rem;
 }
 
@@ -769,20 +778,28 @@ span.colors > div:active {
   padding: 0 3vw;
 }
 
-button.nextBtn {
-  width: 500000px;
-}
-
-.menu {
-  background-color: rebeccapurple;
+.menu ul {
   position: relative;
   z-index: 1;
-  width: 40vw;
+  width: 100vw;
   display: none;
+  flex-direction: column;
+  margin: 7px 0;
 }
 
-.menu ul li {
-  padding: 7px;
+.menu.toggle ul {
+  display: block;
+}
+
+.menu ul li a {
+  padding: 10px 25px;
+  display: inline-block;
+  width: 100%;
+  color: black;
+}
+
+.menu ul li a:hover {
+  background-color: rgb(196, 195, 195);
 }
 
 #menu-toggle {
@@ -795,14 +812,14 @@ button.nextBtn {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin: 10px; 
+  margin: 10px;
 }
 
 #menu-toggle span {
   display: none;
   width: 100%;
   height: 1px;
-  background-color: black; /* Adjust this color as needed */
+  background-color: black;
   margin-bottom: 3px;
 }
 
@@ -813,7 +830,8 @@ button.nextBtn {
     justify-content: space-between;
   }
 
-  .links, .ul {
+  .links,
+  .ul {
     display: none;
     position: absolute;
     margin: 0;
@@ -889,6 +907,7 @@ button.nextBtn {
   .contact-form {
     flex-direction: column;
     position: relative;
+    padding: 50px 0;
   }
 
   .contact-left {
@@ -900,6 +919,9 @@ button.nextBtn {
     margin-bottom: 310px;
   }
 
+  .contact-form textarea {
+    width: 100%;
+  }
   .contact-right input {
     width: 100%;
   }
@@ -911,6 +933,15 @@ button.nextBtn {
   .footer-quality > * {
     flex: 1 0 20%;
     padding: 15px 0;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .right-hand {
+    flex-direction: column;
+    padding: 50px;
   }
 
   .contact-right div {
